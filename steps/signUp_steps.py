@@ -2,7 +2,6 @@ from behave import *
 
 
 #Enter wrong email address
-
 @Given("signUp: I am a user on the sign up page")
 def step_impl(context):
     context.signUp_page.navigate_to_login()
@@ -22,7 +21,7 @@ def step_impl(context, email_error_msg):
 
 #Check error message when input invalid name into "Numele si prenumele" field
 
-@Given('signUp: I fill in the email field with valid data "{email}"')
+@When('signUp: I fill in the email field with valid data "{email}"')
 def step_impl(context, email):
     context.signUp_page.input_valid_email(email)
 
@@ -45,17 +44,24 @@ def step_impl(context,name_message):
 
 #Check error message when leave empty the password field
 
-@Given('signUp: I fill in the email field data "{email}"')
+@When('signUp: I fill in the email field data "{email}"')
 def step_impl(context, email):
     context.signUp_page.input_valid_email(email)
 
 @Then("signUp: I click on Continue btn")
 def step_impl(context):
     context.signUp_page.click_continue_btn()
+@When("signUp: I leave empty the Nume și prenume field")
+def step_impl(context):
+    context.signUp_page.leave_emty_nume_prenume_field()
 
 @When("signUp: I leave empty the password field")
 def step_impl(context):
     context.signUp_page.leave_empty_pass()
+
+@When("signUp: I leave empty the confirm password field")
+def step_impl(context):
+    context.signUp_page.leave_empty_confirm_pass()
 
 @When("signup: I click on register continue button from registration")
 def step_impl(context):

@@ -16,9 +16,9 @@ def step_impl(context):
 def step_impl(context, password):
     context.signIn_page.input_password(password)
 
-# @When("signIn: I click on remember me checkbox")
-# def step_impl(context):
-#     context.signIn_page.click_remember_me_checkbox()
+@When("signIn: I click on remember me checkbox")
+def step_impl(context):
+    context.signIn_page.click_remember_me_checkbox()
 
 @Then("signIn: I click on continue button from login screen")
 def step_impl(context):

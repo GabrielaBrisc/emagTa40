@@ -13,7 +13,7 @@ def before_all(context):
     context.search_page = Search()
     context.filter_results_page = Filter()
     context.add_to_favourites_page = AddToFavourite()
-    context.add_delete_to_cart_page = AddToCart()
+    context.add_to_cart_page = AddToCart()
 
 ###dupa exe toate testele, vrem sa inchidem browser ul respectiv
 def after_all(context):

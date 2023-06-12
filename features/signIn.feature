@@ -6,6 +6,6 @@ Feature: Check the sign in functionality
     When signIn: I fill in the email field with valid address "fgert.dfs@sd.cp"
     When signIn: I click on Continue btn
     When signIn: I fill in the password field "Gabriela*"
-#    When signIn: I click on remember me checkbox
+    When signIn: I click on remember me checkbox
     Then signIn: I click on continue button from login screen
 

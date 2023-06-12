@@ -54,11 +54,17 @@ class SignUp(BasePage):
             actual_wrong_message = "Numele și prenumele nu sunt valide"
         assert expected_message in actual_wrong_message, f'Error, the message is not in actual message, actual={actual_wrong_message}'
 
+    def leave_emty_nume_prenume_field(self):
+        self.driver.find_element(*self.NAME_FIELD).click()
+
     def leave_empty_pass(self):
         self.driver.find_element(*self.PASSWORD_FIELD).click()
+    def leave_empty_confirm_pass(self):
+        self.driver.find_element(*self.CONFIRM_PASSWORD).click()
 
     def click_register_continue_btn(self):
         self.driver.find_element(*self.REGISTER_CONTINUE_BTN).click()
+
 
     def verify_mandatory_error(self,mandatory_error):
         try:
