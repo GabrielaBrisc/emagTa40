@@ -4,7 +4,7 @@ from pages.signIn_page import SignIn
 from pages.search_page import Search
 from pages.filter_results_page import Filter
 from pages.add_to_favorites_page import AddToFavourite
-from pages.add_delete_to_cart_page import AddToCart
+from pages.add_to_cart_page import AddToCart
 
 def before_all(context):
     context.browser = Browser() ## obj de tip browser

@@ -3,7 +3,6 @@ from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
 from selenium.webdriver.common.action_chains import ActionChains
 
-
 class Filter(BasePage):
 
     LAPTOPURI_TELEFOANE_LINK = (By.XPATH, "//span[contains(text(),'Laptop')]/parent::a[@class='js-megamenu-list-department-link gtm_31vgamc']")

@@ -19,4 +19,11 @@ def step_impl(context, favourites_url):
 def step_impl(context):
     context.add_to_favourites_page.check_displayed_favourite_item()
 
-# de adaugat mai multe elemente la favorite si verif un item (cu lista)
+#   Scenario: I want to add an item to favourites after I open item's page
+@When("add to favourite: I click on the first item from the list")
+def step_impl(context):
+    context.add_to_favourites_page.click_on_first_item_from_page()
+
+@Then("add to favourite: I click on the heart icon to add it to favourites")
+def step_impl(context):
+    context.add_to_favourites_page.click_on_heart_icon()
