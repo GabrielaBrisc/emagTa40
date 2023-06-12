@@ -15,6 +15,7 @@ Feature: Check the sign up functionality
       | test@yahoo.co | Email invalid |
       | @@@1234       | Email invalid |
 
+    #de adaugat ceva ca e prea sec si dureaza prea mult eventual sa mai pun sa verifice si parola empty,
   Scenario: Check error message when input invalid name into "Numele si prenumele" field
     Given signUp: I fill in the email field with valid data "brisc.gab2riela@yahoo.com"
     Then signUp: I click on continue button from login
@@ -22,6 +23,7 @@ Feature: Check the sign up functionality
     When signUp: I click on password field
     Then signUp: I verify the name error message "Numele și prenumele nu sunt valide"
 
+    #de adaugat ca lasam toate field urile empty si sa verific eroarea de camp obligatoriu
 @test
   Scenario: Check error message when leave empty the password field
     Given signUp: I fill in the email field data "brisc.gab2riela@yahoo.com"
@@ -30,4 +32,4 @@ Feature: Check the sign up functionality
     When signup: I click on register continue button from registration
     Then signUp: I verify the mandatory error message "Câmp obligatoriu"
 
-  ##pot sa las toate field urile empty si sa verific eroarea de camp obligatoriu
+# de incercat cu email already in use
