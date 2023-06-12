@@ -14,5 +14,3 @@ class AddToCart(BasePage):
 
     def click_add_to_cart(self):
         self.driver.find_element(*self.ADD_TO_CART_BTN).click()
-
-# class DeleteFromCart(BasePage):

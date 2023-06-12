@@ -25,7 +25,6 @@ class AddToFavourite(BasePage):
         self.driver.find_element(*self.FAVOURITE_ELEMENT).is_displayed()
 
 #   Scenario: I want to add an item to favourites after I open item's page
-
     def click_on_first_item_from_page(self):
         list = self.driver.find_elements(*self.ITEM_LIST)
         list[3].click()

@@ -19,6 +19,7 @@ def step_impl(context, favourites_url):
 def step_impl(context):
     context.add_to_favourites_page.check_displayed_favourite_item()
 
+
 #   Scenario: I want to add an item to favourites after I open item's page
 @When("add to favourite: I click on the first item from the list")
 def step_impl(context):

@@ -13,8 +13,7 @@ class Filter(BasePage):
     PREFERENCES_BANNER = (By.XPATH,"//div[@class='gdpr-cookie-banner js-gdpr-cookie-banner pad-sep-xs pad-hrz-none show']")
     CELE_MAI_POPULARE_DROPDOWN = (By.XPATH,"//span[contains(text(),'Cele mai populare')][@class='sort-control-btn-option text-truncate']")
     PRET_CRESCATOR = (By.XPATH,"//a[@data-sort-dir='asc']")
-    # GARMIN_FILTER = (By.XPATH,"//a[@data-option-id='409']")
-    # GARMIN_WATCHES_LIST = (By.CLASS_NAME,"card-v2-title semibold mrg-btm-xxs js-product-url")
+
     def navigate_to_homepage(self):
         self.driver.get("https://www.emag.ro/")
     def click_on_accept_preferences_btn(self):

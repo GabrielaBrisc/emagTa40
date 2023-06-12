@@ -17,8 +17,7 @@ class SignUp(BasePage):
     REGISTER_CONTINUE_BTN = (By.ID, "user_register_continue")
     ACTIVATE_LATER_LINK_TEXT = (By.LINK_TEXT, "Activez mai tarziu")
 
-    #dupa parola, e redirect la https://www.emag.ro/user/myaccount (pot sa fac un check de link uri)
-
+#   Scenario Outline: Enter wrong email address and verify the error
     def navigate_to_login(self):
         self.driver.get("https://auth.emag.ro/user/login")
 
@@ -35,6 +34,7 @@ class SignUp(BasePage):
             actual_message = "Email invalid"
         assert expected_error in actual_message, f'Error, the message is not in actual message, actual={actual_message}'
 
+#  Scenario: Check error message when input invalid name into "Numele si prenumele" field
     def input_valid_email(self, valid_email):
         self.driver.find_element(*self.EMAIL_FIELD).send_keys(valid_email)
 
@@ -54,6 +54,7 @@ class SignUp(BasePage):
             actual_wrong_message = "Numele și prenumele nu sunt valide"
         assert expected_message in actual_wrong_message, f'Error, the message is not in actual message, actual={actual_wrong_message}'
 
+#  Scenario: Check error message when leave empty the password field
     def leave_emty_nume_prenume_field(self):
         self.driver.find_element(*self.NAME_FIELD).click()
 
@@ -64,7 +65,6 @@ class SignUp(BasePage):
 
     def click_register_continue_btn(self):
         self.driver.find_element(*self.REGISTER_CONTINUE_BTN).click()
-
 
     def verify_mandatory_error(self,mandatory_error):
         try:

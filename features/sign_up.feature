@@ -3,7 +3,7 @@ Feature: Check the sign up functionality
  Background:
    Given signUp: I am a user on the sign up page
 
-  Scenario Outline: Enter wrong email address
+  Scenario Outline: Enter wrong email address and verify the error
     When signUp: I fill in the email field "<email>"
     When signUp: I click on Continue button
     Then signUp: I verify the error message "<error_message>"

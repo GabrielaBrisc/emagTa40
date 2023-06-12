@@ -1,6 +1,7 @@
 Feature: Check the sign in functionality
   Background:
     Given signIn: I am a user on the sign in page
+
   @signin
   Scenario: Enter valid email address and password
     When signIn: I fill in the email field with valid address "fgert.dfs@sd.cp"
