@@ -20,6 +20,8 @@ class SignUp(BasePage):
 #   Scenario Outline: Enter wrong email address and verify the error
     def navigate_to_login(self):
         self.driver.get("https://auth.emag.ro/user/login")
+    def delete_text_from_email_field(self):
+        self.driver.find_element(*self.EMAIL_FIELD).clear()
 
     def input_invalid_email(self, email):
         self.driver.find_element(*self.EMAIL_FIELD).send_keys(email)

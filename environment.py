@@ -15,6 +15,6 @@ def before_all(context):
     context.add_to_favourites_page = AddToFavourite()
     context.add_to_cart_page = AddToCart()
 
-###dupa exe toate testele, vrem sa inchidem browser ul respectiv
+#dupa executarea tuturor testelor, vrem sa inchidem browser-ul
 def after_all(context):
     context.browser.close()

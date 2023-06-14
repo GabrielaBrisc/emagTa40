@@ -1,10 +1,13 @@
 from behave import *
 
-
 #Enter wrong email address
 @Given("signUp: I am a user on the sign up page")
 def step_impl(context):
     context.signUp_page.navigate_to_login()
+
+@When("signUp: Delete text from field")
+def step_impl(context):
+    context.signUp_page.delete_text_from_email_field()
 
 @When('signUp: I fill in the email field "{email_address}"')
 def step_impl(context, email_address):

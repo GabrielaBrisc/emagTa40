@@ -15,4 +15,3 @@ Scenario: I want to filter the results after pret crescator
   Then filter: I click on pret crescator btn
 
 
-

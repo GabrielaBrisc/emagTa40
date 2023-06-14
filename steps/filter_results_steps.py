@@ -33,4 +33,3 @@ def step_impl(context):
 def step_impl(context):
     context.filter_results_page.click_on_pret_crescator()
 
-
