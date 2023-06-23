@@ -15,6 +15,7 @@ class Filter(BasePage):
     PRET_CRESCATOR = (By.XPATH,"//a[@data-sort-dir='asc']")
     GARMIN_FILTER = (By.XPATH,"//a[@data-option-id='409']")
     GARMIN_WATCHES_LIST = (By.CLASS_NAME,"card-v2-title semibold mrg-btm-xxs js-product-url")
+    PRICE_LIST = (By.XPATH,"//div[@id='card_grid']/descendant::p[@class='product-new-price']")
 
     def navigate_to_homepage(self):
         self.driver.get("https://www.emag.ro/")
@@ -25,7 +26,6 @@ class Filter(BasePage):
             self.driver.find_element(*self.CLOSE_BTN_VEZI_OFERTA).click()
 
     def hover_on_laptop_tab_tel(self):
-        #nu face hover?
         elem_hover = self.driver.find_element(*self.LAPTOPURI_TELEFOANE_LINK)
         action = ActionChains(self.driver)
         action.move_to_element(elem_hover).perform()
@@ -39,3 +39,12 @@ class Filter(BasePage):
 
     def click_on_pret_crescator(self):
         self.driver.find_element(*self.PRET_CRESCATOR).click()
+
+    def verify_if_the_sort_is_increasing(self):
+        list = self.driver.find_elements(By.XPATH,"/div[@id='card_grid']/descendant::p[@class='product-new-price'][text()][1]")
+        for i,j in range(0,len(list)):
+         if i<j:
+            print("The list is sorted")
+         else:
+            print("The list is not sorted")
+

@@ -13,5 +13,6 @@ Feature: Check the filter functionality
 Scenario: I want to filter the results after pret crescator
   When filter: I click on cele mai populare dropdown
   Then filter: I click on pret crescator btn
+  Then filter: I verify if the elements are sorted increasing
 
 

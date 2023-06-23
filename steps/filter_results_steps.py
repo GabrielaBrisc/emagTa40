@@ -32,4 +32,6 @@ def step_impl(context):
 @Then("filter: I click on pret crescator btn")
 def step_impl(context):
     context.filter_results_page.click_on_pret_crescator()
-
+@Then("filter: I verify if the elements are sorted increasing")
+def step_impl(context):
+    context.filter_results_page.verify_if_the_sort_is_increasing()
