@@ -23,7 +23,7 @@ Feature: Check the sign up functionality
     Then signUp: I verify the name error message "Numele și prenumele nu sunt valide"
 
   @signUp
-  Scenario: Check error message when leave empty the password field
+  Scenario: Check error message when leave empty the fields
     When signUp: I fill in the email field data "brisc.gabriela1@yahoo.com"
     Then signUp: I click on Continue btn
     When signUp: I leave empty the Nume și prenume field

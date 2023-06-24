@@ -4,5 +4,6 @@ Feature: Check search functionality
     Given search: I am a user on emag page
     When search: I click on search field and input "smartwatch"
     Then search: I hit the enter button from keyboard and some results are displayed
+    Then search: I verify if the search is correct
 
 
