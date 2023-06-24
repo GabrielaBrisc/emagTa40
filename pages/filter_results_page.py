@@ -42,7 +42,7 @@ class Filter(BasePage):
 
     def verify_if_the_sort_is_increasing(self):
 
-        list = self.driver.find_elements(By.XPATH,"//div[@id='card_grid']/descendant::p[@class='product-new-price'][text()][1]")
+        list = self.driver.find_elements(By.XPATH,"//div[@id='card_grid']/descendant::p[@class='product-new-price'][text()]")
         new_list = []
         is_sorted= True
         for i in list:
@@ -54,11 +54,3 @@ class Filter(BasePage):
                     is_sorted = False
         assert is_sorted, f'Error, the list is not sorted'
 
-        # for i, j in list:
-        #     if i < j:
-        #         new_list.append(i)
-        #         is_sorted = True
-        # for i, j in list:
-        #     if i > j:
-        #         is_sorted = False
-        # assert is_sorted == False, f'Error, the list is not sorted'
