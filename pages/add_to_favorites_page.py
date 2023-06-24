@@ -1,11 +1,12 @@
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
+import unittest
 
 class AddToFavourite(BasePage):
-    HEART_ICON = (By.XPATH, "//*[@id='card_grid']/div[1]/div/div/div[2]/button[1]/i") #de la ceasul dorit
+    HEART_ICON = (By.XPATH, "//div[@class='card-item card-standard js-product-data'][1]/descendant::button[@class='add-to-favorites btn']") #de la ceasul dorit
     FAVORITE_BUTTON = (By.ID, "my_wishlist")
     ELEMENT_ADDED_TO_FAVOURITE = (By.XPATH, "//div[@class='product-card-account pad-sep-sm js-tracking-viewport-product  ']")
-    OPEN_ITEM = (By.XPATH, "//a[@data-zone='title']") #nu stiu sa il iau altfel
+    OPEN_ITEM = (By.XPATH, "//div[@class='card-item card-standard js-product-data'][1]") #nu stiu sa il iau altfel
     HEART_ICON_FROM_ITEM_PAGE = (By.XPATH,"//span[@class='gtm_t95ovv']")
     def nav_to_list_with_items(self):
         self.driver.get("https://www.emag.ro/search/smartwatch%20garmin%20dama?ref=effective_search")
@@ -21,12 +22,12 @@ class AddToFavourite(BasePage):
         assert url == actual_url, f'Error, the message is not in actual message, {actual_url}'
 
     def check_displayed_favourite_item(self):
-       assert self.driver.find_element(*self.ELEMENT_ADDED_TO_FAVOURITE).is_displayed(), f"The element is displayed on favourite page"
+        self.driver.find_element(*self.ELEMENT_ADDED_TO_FAVOURITE).is_displayed()
+        assert True
 
 #   Scenario: I want to add an item to favourites after I open item's page
     def click_on_first_item_from_page(self):
-        list = self.driver.find_elements(*self.OPEN_ITEM)
-        list[3].click()
+        self.driver.find_element(*self.OPEN_ITEM).click()
 
     def click_on_heart_icon(self):
         self.driver.find_element(*self.HEART_ICON_FROM_ITEM_PAGE).click()

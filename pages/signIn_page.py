@@ -7,6 +7,7 @@ class SignIn(BasePage):
     PASSWORD_FIELD = (By.XPATH, "//input[@name='user_login[password]']")
     REMEMBER_ME_BTN = (By.XPATH,"//label[@for='remember_me']")
 
+
     def navigate_to_sign_in(self):
         self.driver.get("https://auth.emag.ro/user/login")
 
