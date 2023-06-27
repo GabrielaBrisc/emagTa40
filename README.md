@@ -1,39 +1,39 @@
-Acest proiect consta in testarea a catorva features de pe site-ul eMag.
+<strong>Acest proiect consta in testarea a catorva features de pe site-ul eMag. Acesta este un e-commerce site.</strong>
 
-  #Add to cart 
-  Scenario: I want to add an item to cart
-  In acest scenariu se doreste adaugarea unui obiect/element in cosul de cumparaturi prin deschiderea paginii elementului 
-  si prin apasarea butonului "Adauga in cos"
+  <h2>#Add to cart </h2>
+  <strong>Scenario:</strong> I want to add an item to cart
+  <p>In acest scenariu se doreste adaugarea unui obiect/element in cosul de cumparaturi prin deschiderea paginii elementului 
+  si prin apasarea butonului "Adauga in cos"</p>
 
-  #Add to favourites
-  Scenario: I want to add an item to favourite
-  In acest scenariu se doreste adaugarea unui element de pe o pagina cu o lista de elemente
+ <h2>#Add to favourites</h2>
+  <strong>Scenario:</strong> I want to add an item to favourite
+  <p>In acest scenariu se doreste adaugarea unui element de pe o pagina cu o lista de elemente</p>
 
-  Scenario: I want to add an item to favourites after I open item's page
-  Item-ul s-a adaugat la sectiunea favorite dupa ce s-a navigat in pagina elementului
+  <strong>Scenario:</strong> I want to add an item to favourites after I open item's page
+  <p>Item-ul s-a adaugat la sectiunea favorite dupa ce s-a navigat in pagina elementului</p>
 
-  #filter results
-  Scenario: I want to reach mobile phones screen
-  User-ul a navigat spre pagina de telefoane mobile.
+  <h2>#Filter results</h2>
+  <strong>Scenario:</strong> I want to reach mobile phones screen
+  <p>User-ul a navigat spre pagina de telefoane mobile.</p>
 
-  Scenario: I want to filter the results after pret crescator
-  Dupa ce user-ul a ajuns pe pagina cu telefoane mobile, user-ul filtreaza crescator rezultatele, iar mai apoi verifica 
-  daca sunt sortate crescator
+  <strong>Scenario:</strong> I want to filter the results after pret crescator
+  <p>Dupa ce user-ul a ajuns pe pagina cu telefoane mobile, user-ul filtreaza crescator rezultatele, iar mai apoi verifica 
+  daca sunt sortate crescator</p>
 
-  #Search
-  Scenario: I search for an item
-  De pe pagina principala, user-ul cauta "smartwatch" in field-ul de cautare dupa care verifica daca search-ul e corect
+  <h2>#Search</h2>
+  <strong>Scenario:</strong> I search for an item
+  <p>De pe pagina principala, user-ul cauta "smartwatch" in field-ul de cautare dupa care verifica daca search-ul e corect</p>
 
-  #Sign in
-  Scenario: Enter valid email address and password
-  User-ul se logheaza
+  <h2>#Sign in</h2>
+  <strong>Scenario:</strong> Enter valid email address and password
+  <p>In acest scenariu user-ul se logheazap></p>
 
-  #Sign up
-  Scenario Outline: Enter wrong email address and verify the error
-  User-ul incearca sa isi creeze cont cu un email gresit
+  <h2>#Sign up</h2>
+  <strong>Scenario Outline:</strong> Enter wrong email address and verify the error
+ <p>User-ul incearca sa isi creeze cont cu un email gresit</p>
   
-  Scenario: Check error message when input invalid name into "Numele si prenumele" field
-  User-ul verifica eroarea care apare in urma inserarii unui nume invalid in field-ul de nume
+  <strong>Scenario:</strong> Check error message when input invalid name into "Numele si prenumele" field
+  <p>User-ul verifica eroarea care apare in urma inserarii unui nume invalid in field-ul de nume</p>
   
-  Scenario: Check error message when leave empty the fields
-  User-ul verifica eroarea care apare cand field-utile sunt empty 
+  <strong>Scenario:</strong> Check error message when leave empty the fields
+  <p>User-ul verifica eroarea care apare cand field-utile sunt empty</p>

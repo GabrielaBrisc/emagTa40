@@ -40,14 +40,12 @@ class Filter(BasePage):
     def click_on_pret_crescator(self):
         self.driver.find_element(*self.PRET_CRESCATOR).click()
 
+    #nu merge partea de verificare
     def verify_if_the_sort_is_increasing(self):
-        list = self.driver.find_elements(By.XPATH,"//div//p[@class='product-new-price']")
-        new_list = []
-        is_sorted = False
-        for i in list:
-            for j in list:
-                if list[i] < list[j]:
-                    new_list.append(i)
-                    is_sorted = True
-        assert is_sorted, f'Error, the list is not sorted'
-
+        list = self.driver.find_elements(By.XPATH, "//div//p[@class='product-new-price']")
+        is_sorted = True
+        for i in range (len(list)-1):
+                #todo: extract here only the price
+            if list[i] > list[i+1]:
+                is_sorted = False
+        assert is_sorted ==  True, f'Error, the list is not sorted'
