@@ -40,7 +40,7 @@ class Filter(BasePage):
     def click_on_pret_crescator(self):
         self.driver.find_element(*self.PRET_CRESCATOR).click()
 
-    #nu merge partea de verificare
+     #m-am gandit sa fac o varianta mai usoara de verificare (doar cu un for, nu cu nested for)
     def verify_if_the_sort_is_increasing(self):
         list = self.driver.find_elements(By.XPATH, "//div//p[@class='product-new-price']")
         is_sorted = True
